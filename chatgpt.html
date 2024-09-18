@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Typing Animation on Load</title>
+    <style>
+        .typing {
+            font-family: monospace;
+            overflow: hidden;
+            display: inline-block; /* Allows the cursor to appear at the end of the text */
+        }
+
+        @keyframes blinkCursor {
+            50% {
+                border-color: transparent;
+            }
+        }
+
+        .typing::after {
+            content: '';
+            animation: blinkCursor 0.8s steps(1) infinite;
+        }
+
+        #textContainer {
+            width: 60%; /* Example width for the container */
+            border: 1px solid #ccc;
+            padding: 10px;
+            box-sizing: border-box; /* Ensures padding doesn't affect total width */
+        }
+    </style>
+</head>
+<body>
+
+    <div id="textContainer">
+        <p id="paragraph" class="typing">
+           
+            This paragraph will display with a typing animation when the page loads and wrap based on the container's size.
+        </p>
+    </div>
+
+    <script>
+        // for text typing animetion
+
+        // need to change paragraph id
+        var paragraph = document.getElementById("paragraph");
+        var text = paragraph.innerHTML; // Get the original text in the paragraph
+        var speed = 100; // Typing speed in milliseconds
+
+        // Clear the paragraph content
+        paragraph.innerHTML = "";
+
+        function typeWriter(text, elementId, speed) {
+            var i = 0;
+            function type() {
+                if (i < text.length) {
+                    document.getElementById(elementId).innerHTML += text.charAt(i);
+                    i++;
+                    setTimeout(type, speed);
+                }
+            }
+            type();
+        }
+
+        // Start the typing effect when the page loads
+        // need to change paragraph id
+        window.onload = function() {
+            typeWriter(text, "paragraph", speed);
+        };
+    </script>
+
+</body>
+</html>
