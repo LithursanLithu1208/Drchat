@@ -67,7 +67,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
               <?php endif; ?>
 
               <label for="password" class="mb-2 mt-3">
-                <a href="login.php" class="text-end" style="text-decoration: none; color:#67BEFF;">Back to Login</a>
+                <a href="login.html" class="text-end" style="text-decoration: none; color:#67BEFF;">Back to Login</a>
               </label>
               <input type="submit" value="Reset" name="reset_password" class="btn text-white mt-2 mb-3 w-100" style="background-color: #0594FF; height: 50px;">
             </form>

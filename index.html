@@ -95,7 +95,7 @@
           <div class="col-12 " style="background-color: #0594FF; overflow-x: hidden;">
             <nav class="navbar navbar-expand-lg navbar-dark " >
                 <div class="container-fluid">
-                  <h2 class="text-white ps-5">Dr.Chat</h2>
+                    <img src="assets/dr_logo.jpeg" alt="logo" style="height: 40px; height: 50px; padding-left: 20px;">
                   <button class="navbar-toggler text-white" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar2" >
                     <span class="navbar-toggler-icon text-white"></span>
                   </button>
@@ -144,8 +144,7 @@
         <div>
             <h2 class="text-center">OR</h2>
         </div>
-
-        <!-- second group -->
+<!-- second group -->
         <div class="form-group my-3 p-2 big-cantainer" style="box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; border-radius: 10px;">
             <label for="symptomsInput">Symptoms Analysis:</label>
             <textarea id="symptomsInput" class="w-100  form-control rounded-3 my-3 " style="background-color: #D2EBFF;" rows="4" placeholder="List your symptoms separated by commas..."></textarea>
@@ -194,9 +193,7 @@
            </div>
        </div>
     </div>
-
     <script>
-
         // Function to submit first aid inquiry
         function sendFirstAidRequest() {
             const userInput = document.getElementById('userInput').value;
@@ -234,7 +231,6 @@
             })
             .catch(error => console.error('Error:', error));
         }
-
         // Submit Image Prediction
         function sendImageRequest() {
             const fileInput = document.getElementById('imageInput');
@@ -242,10 +238,8 @@
                 alert('Please select an image file.');
                 return;
             }
-
             const formData = new FormData();
             formData.append('file', fileInput.files[0]);
-
             fetch('/predict-image', {
                 method: 'POST',
                 body: formData
@@ -268,12 +262,8 @@
                 div.style.display = "none";
             }
         }
-
-
         // for typing animation
           // for text typing animetion
-
-        // need to change paragraph id
         var paragraph = document.getElementById("paragraph");
         var text = paragraph.innerHTML; // Get the original text in the paragraph
         var speed = 40; // Typing speed in milliseconds
@@ -294,7 +284,6 @@
         }
 
         // Start the typing effect when the page loads
-        // need to change paragraph id
         window.onload = function() {
             typeWriter(text, "paragraph", speed);
         };
