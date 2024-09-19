@@ -1,6 +1,6 @@
 <?php
-session_start(); // Start the session
-include 'db.php';  // Include the database connection
+session_start(); 
+include 'db.php';  
 
 // Check if the register form was submitted
 if (isset($_POST['register'])) {
