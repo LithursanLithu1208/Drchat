@@ -23,6 +23,20 @@
                 background-size: cover;
                 background-position: center; 
             }
+            .text-border {
+  color: white; /* Text color */
+  text-shadow: 
+    1px 1px 0 white,   /* Top-left */
+    1px 1px 0 white,    /* Top-right */
+    1px 1px 0 white,    /* Bottom-left */
+    1px 1px 0 white;     /* Bottom-right */
+
+}
+
+
+
+
+
         </style>
 
 </head>
@@ -43,13 +57,13 @@
                 <div class="offcanvas-body">
                   <ul class="navbar-nav justify-content-center flex-grow-1 p-2">
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Home</a>
+                        <a class="nav-link active" href="#">Home</a>
                       </li>
                       <li class="nav-item">
                         <a class="nav-link" href="register.html">Register</a>
                       </li>
                     <li class="nav-item">
-                      <a class="nav-link active" aria-current="page" href="login.html">Login</a>
+                      <a class="nav-link " aria-current="page" href="login.html">Login</a>
                     </li>
                   </ul>
                 </div>
@@ -57,10 +71,48 @@
             </div>
           </nav>
     </div>
-      <div class="baner" >
+      <div class="baner" style="display: flex; justify-content: center; align-items: center; text-align: center;">
         
+        <div class="animetiontext" style="display: inline-block;">
+          <h5 class="typing text-border " id="paragraph" style="font-size: 4vw; border-color: white solid ; letter-spacing: 2px;  width: 100%;  animation: typing 3s, cursor .4s step-end infinite alternate; color: transparent; opacity:30%;">
+            "Your health companion, powered by AI. Ask, learn, and get answers instantly."
+          </h5>
+
 
       </div>
+      </div>
+
+      <script>
+        
+        // for typing animation
+          // for text typing animetion
+
+        // need to change paragraph id
+        var paragraph = document.getElementById("paragraph");
+        var text = paragraph.innerHTML; // Get the original text in the paragraph
+        var speed = 40; // Typing speed in milliseconds
+
+        // Clear the paragraph content
+        paragraph.innerHTML = "";
+
+        function typeWriter(text, elementId, speed) {
+            var i = 0;
+            function type() {
+                if (i < text.length) {
+                    document.getElementById(elementId).innerHTML += text.charAt(i);
+                    i++;
+                    setTimeout(type, speed);
+                }
+            }
+            type();
+        }
+
+        // Start the typing effect when the page loads
+        // need to change paragraph id
+        window.onload = function() {
+            typeWriter(text, "paragraph", speed);
+        };
+      </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 

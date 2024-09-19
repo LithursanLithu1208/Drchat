@@ -63,7 +63,7 @@
                             <div class="col-12">
                                 <div class="row">
                                     <div class="col-md-5">
-                                        <b><p>if you don't have an account register you can <span style="color:#0594FF;"><b>Register here!</b></span></p> </b>
+                                        <b><p>if you don't have an account register you can <span style="color:#0594FF;"><b><a href="register.html">Register here!</a></b></span></p> </b>
                                     </div>
                                     <div class="col-md-7">
                                         <img src="assets/Image_ Online Doctor.png" alt=" doctor image" class="img-fluid" >
@@ -77,23 +77,25 @@
                         <div class="row" >
                             <h1>Sign in</h1>
                             <div class="col-12" >
-                                <form action="##" class="pe-5">                                
+                                <form id="loginForm" method="POST" action="process_login.php" class="pe-5">                            
+                                 
                                     <label for="email" class="mb-2 mt-3" style="color: #67BEFF;">Email</label>
-                                    <input type="email" class="w-100 form-control rounded-3 " placeholder="Enter your Email And User Name" style="background-color: #D2EBFF; height: 50px;">                                
+                                    <input type="email" name="email" class="w-100 form-control rounded-3 " placeholder="Enter your Email And User Name"  required style="background-color: #D2EBFF; height: 50px;">                                
                                     
                                     <label for="password" class="mb-2 mt-3" style="color: #67BEFF;">password</label>
-                                    <input type="password" class="w-100 form-control rounded-3 " style="background-color: #D2EBFF;  height: 50px;" placeholder="Enter your password">                               
+                                    <input type="password" name="password" class="w-100 form-control rounded-3 " style="background-color: #D2EBFF;  height: 50px;" placeholder="Enter your password" required >                               
+                                
                                     
                                     <label for="password" class=" mb-2 mt-3 ">
-                                        <a href="###" class="text-end"  style="text-decoration: none; color:#67BEFF;">Forgot password?</a>
+                                        <a href="forgot_password.php" class="text-end"  style="text-decoration: none; color:#67BEFF;">Forgot password?</a>
                                     </label>
-                                    <input type="submit" value="Login" class="btn text-white mt-2 mb-3 w-100 " style="background-color: #0594FF; height: 50px;">
+                                    <input type="submit" value="Login" name="login" class="btn text-white mt-2 mb-3 w-100 " style="background-color: #0594FF; height: 50px;">
                                     <div class="text-center mt-5">
                                         <p style="color: rgb(157, 161, 164);">or continue with</p>
                                         <div class="d-flex justify-content-center">
-                                            <i class="fa-brands fa-facebook fa-2x mx-2" style="color: #0594FF;"></i>
-                                            <i class="fa-brands fa-apple fa-2x mx-2" style="color: #0594FF;"></i>
-                                            <i class="fa-brands fa-google fa-2x mx-2" style="color: #0594FF;"></i>
+                                            <a href="https://web.facebook.com/login.php/?_rdc=1&_rdr"><i class="fa-brands fa-facebook fa-2x mx-2" style="color: #0594FF;"></i></a>
+                                            <a href="https://www.instagram.com/accounts/login/?hl=en"><i class="fa-brands fa-apple fa-2x mx-2" style="color: #0594FF;"></i></a>
+                                            <a href="https://accounts.google.com/v3/signin/"><i class="fa-brands fa-google fa-2x mx-2" style="color: #0594FF;"></i></a>
                                         </div>
                                     </div>
                                 </form>

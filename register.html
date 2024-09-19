@@ -77,18 +77,18 @@
                         <div class="row" >
                             <h1>Sign in</h1>
                             <div class="col-12" >
-                                <form action="##" class="pe-5">                                
-                                    <input type="email" class="w-100 form-control rounded-3 my-3 " placeholder="Enter your Email " style="background-color: #D2EBFF; height: 50px;">                                
+                                <form id="registerForm" method="POST" action="process_register.php" class="pe-5">                                
+                                    <input type="email" name="email" class="w-100 form-control rounded-3 my-3 " placeholder="Enter your Email " style="background-color: #D2EBFF; height: 50px;" required>                                
                                     
-                                    <input type="email" class="w-100 form-control rounded-3 my-3 " placeholder="Create user name" style="background-color: #D2EBFF; height: 50px;">                                
+                                    <input type="text" name="username" class="w-100 form-control rounded-3 my-3 " placeholder="Create user name" style="background-color: #D2EBFF; height: 50px;" required>                                
                                     
-                                    <input type="number" class="w-100 form-control rounded-3 my-3 " placeholder="Contact Number" style="background-color: #D2EBFF; height: 50px;">                                
+                                    <input type="text" name="phone" class="w-100 form-control rounded-3 my-3 " placeholder="Contact Number" style="background-color: #D2EBFF; height: 50px;" required>                                
                                     
-                                    <input type="password" class="w-100 form-control rounded-3 my-3 " style="background-color: #D2EBFF;  height: 50px;" placeholder="Enter your password">                               
+                                    <input type="password" name="password" class="w-100 form-control rounded-3 my-3 " style="background-color: #D2EBFF;  height: 50px;" placeholder="Enter your password" required>                               
                                     
-                                    <input type="password" class="w-100 form-control rounded-3 my-3 " style="background-color: #D2EBFF;  height: 50px;" placeholder="Confirm password">                               
+                                    <input type="password" name="confirm_password" class="w-100 form-control rounded-3 my-3 " style="background-color: #D2EBFF;  height: 50px;" placeholder="Confirm password" required>                               
                                     
-                                    <input type="submit" value="Submit" class="btn text-white mt-2 mb-3 w-100 " style="background-color: #0594FF; height: 50px;">
+                                    <input type="submit" value="Submit" name="register" class="btn text-white mt-2 mb-3 w-100 " style="background-color: #0594FF; height: 50px;">
                                     <div class="text-center mt-5">
                                         <p style="color: rgb(157, 161, 164);">or continue with</p>
                                         <div class="d-flex justify-content-center">
